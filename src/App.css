@@ -1,0 +1,29 @@
+.slick-prev:before,.slick-next:before {
+  background-color: rgb(236, 234, 234);
+  border-radius: 10px;
+}
+
+
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0;
+ 
+}
+/* #e7e6e6e3 */
+.shimmer-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #dbdbdbe3, transparent);
+  animation: shimmer 1s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
